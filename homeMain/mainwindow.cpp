@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 #include "MenuTab.h"
+#include "ImportDatabaseDialog.h"
 #include <QToolBar>
 #include <QFileDialog>
 #include <QStatusBar>
@@ -127,11 +128,8 @@ void MainWindow::onSaveProject()
 
 void MainWindow::onImportData()
 {
-    auto path = QFileDialog::getOpenFileName(this, tr("数据源导入"), QString(), tr("CSV (*.csv);;Excel (*.xlsx);;所有文件 (*.*)"));
-    if (!path.isEmpty())
-    {
-        statusBar()->showMessage(tr("导入: %1").arg(path), 3000);
-    }
+    ImportDatabaseDialog dlg(this);
+    dlg.exec();
 }
 
 void MainWindow::onPublishProject()

@@ -42,14 +42,14 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer_5">
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_6">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
-       <width>463</width>
+       <width>632</width>
        <height>20</height>
       </size>
      </property>
@@ -151,7 +151,10 @@ font-family: AlibabaPuHui-bold;
 background: transparent;</string>
         </property>
         <property name="text">
-         <string/>
+         <string>大唐电站监控系统欢迎您</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
@@ -442,19 +445,6 @@ background: transparent;</string>
      </layout>
     </widget>
    </item>
-   <item row="1" column="2">
-    <spacer name="horizontalSpacer_6">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>632</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
    <item row="2" column="1">
     <layout class="QVBoxLayout" name="verticalLayout" stretch="5,0,1">
      <item>
@@ -515,6 +505,19 @@ color:white;</string>
       </spacer>
      </item>
     </layout>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>463</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>

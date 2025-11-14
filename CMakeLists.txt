@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+﻿cmake_minimum_required(VERSION 3.5)
 
 project(PowerSystem LANGUAGES CXX)
 
@@ -24,11 +24,13 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS
     "${CMAKE_CURRENT_SOURCE_DIR}/ui"
     "${CMAKE_CURRENT_SOURCE_DIR}/ui/login"
     "${CMAKE_CURRENT_SOURCE_DIR}/ui/homeMain"
+    "${CMAKE_CURRENT_SOURCE_DIR}/ui/base"
     )
 
 file(GLOB_RECURSE SRC_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/homeMain/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/login/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/base/*.cpp
     )
 
 file(GLOB_RECURSE UI_FILES
@@ -38,6 +40,7 @@ file(GLOB_RECURSE UI_FILES
 file(GLOB_RECURSE HEADER_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/homeMain/*.h
     ${CMAKE_CURRENT_SOURCE_DIR}/login/*.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/base/*.h
     )
 
 file(GLOB RESOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/res/*.qrc)
@@ -45,12 +48,16 @@ qt5_add_resources(QRC_FILES ${RESOURCE_FILES})
 
 list(APPEND CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/ui)
 
+
 list(APPEND CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/homeMain)
+list(APPEND CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/homeMain/startBar)
 list(APPEND CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/login)
+list(APPEND CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/base/dlg)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/homeMain)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/homeMain/startBar)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/login)
-
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/base/dlg)
 
 add_executable(PowerSystem
     WIN32

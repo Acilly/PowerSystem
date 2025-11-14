@@ -1,4 +1,4 @@
-#include "LoginWidget.h"
+﻿#include "LoginWidget.h"
 #include "ui_LoginWidget.h"
 #include <QFile>
 #include <QTextStream>
@@ -55,10 +55,10 @@ bool LoginWidget::initialization()
     ui->icon2->setScaledContents(true);
     ui->icon2->setPixmap(QPixmap(":/images/icon2.png"));
 
-    ui->title->resize(QPixmap(":/images/title.png").size());
-    ui->title->setScaledContents(true);
-    ui->title->setPixmap(QPixmap(":/images/title.png"));
-    ui->title->setAlignment(Qt::AlignCenter);
+//    ui->title->resize(QPixmap(":/images/title.png").size());
+//    ui->title->setScaledContents(true);
+//    ui->title->setPixmap(QPixmap(":/images/title.png"));
+//    ui->title->setAlignment(Qt::AlignCenter);
 
     ui->ground1->resize(QPixmap(":/images/ground1.png").size());
     ui->ground1->setScaledContents(true);
