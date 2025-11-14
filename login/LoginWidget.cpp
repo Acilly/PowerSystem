@@ -1,4 +1,4 @@
-﻿#include "LoginWidget.h"
+#include "LoginWidget.h"
 #include "ui_LoginWidget.h"
 #include <QFile>
 #include <QTextStream>
@@ -102,6 +102,7 @@ void LoginWidget::initConnect()
         QString pwd = ui->Password->text();
         QString token = "";
 
+        emit emitLoginSuccesful();
     });
 }
 

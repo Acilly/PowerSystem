@@ -13,6 +13,23 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#MenuTab { background-color: #24324A; }
+QTabWidget { background-color: #24324A; }
+QTabWidget::pane { border: none; }
+QTabWidget::tab-bar { left: 0px; }
+QTabBar { background: #24324A; }
+QTabBar::tab {
+    background: #24324A;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    font-weight: 600;
+}
+QTabBar::tab:selected { background: #1E2A42; }
+QTabBar::tab:hover { background: #2D3B57; }
+QWidget#tab_Start { background: #F5F5F5; }
+QWidget#tab_Graph, QWidget#tab_Query, QWidget#tab_Report, QWidget#tab_Help { background: #F5F5F5; }</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
@@ -43,7 +60,7 @@
      <property name="movable">
       <bool>false</bool>
      </property>
-     <widget class="QWidget" name="tab_Start">
+    <widget class="QWidget" name="tab_Start">
       <attribute name="title">
        <string>开始</string>
       </attribute>
@@ -53,14 +70,14 @@
        <string>图形</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_Layout">
+     <widget class="QWidget" name="tab_Query">
       <attribute name="title">
-       <string>布局</string>
+       <string>查询</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_Window">
+     <widget class="QWidget" name="tab_Report">
       <attribute name="title">
-       <string>窗口</string>
+       <string>报表</string>
       </attribute>
      </widget>
      <widget class="QWidget" name="tab_Help">
